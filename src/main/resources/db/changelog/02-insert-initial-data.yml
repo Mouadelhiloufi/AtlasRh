@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6-insert-default-leave-types
+      author: atlasrh
+      changes:
+        - insert:
+            tableName: leave_type
+            columns:
+              - column:
+                  name: name
+                  value: Congé Annuel
+              - column:
+                  name: days_per_year
+                  valueNumeric: 22
+        - insert:
+            tableName: leave_type
+            columns:
+              - column:
+                  name: name
+                  value: Congé Exceptionnel
+              - column:
+                  name: days_per_year
+                  valueNumeric: 10
