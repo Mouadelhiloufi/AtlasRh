@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/emolyes")
+@RequestMapping("/api/employes")
 @RequiredArgsConstructor
 
 public class EmployeController {
@@ -26,7 +26,7 @@ public class EmployeController {
 
     @PostMapping
     @Operation(summary = "Créer un nouvel employé")
-    ResponseEntity<EmployeResponseDTO> createEmploye(@Valid @RequestBody EmployeRequestDTO dto {
+    ResponseEntity<EmployeResponseDTO> createEmploye(@Valid @RequestBody EmployeRequestDTO dto) {
         EmployeResponseDTO response=employeService.createEmploye(dto);
         return new ResponseEntity(response, HttpStatus.CREATED);
 
@@ -40,7 +40,7 @@ public class EmployeController {
     }
 
 
-    @GetMapping
+    @GetMapping("/{id}")
     public ResponseEntity<EmployeResponseDTO> getEmployeById(@PathVariable Long id){
         return ResponseEntity.ok(employeService.getEmployeById(id));
     }
@@ -62,4 +62,3 @@ public class EmployeController {
     }
 }
 
-}

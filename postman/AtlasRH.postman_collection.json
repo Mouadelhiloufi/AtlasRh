@@ -1,0 +1,194 @@
+{
+  "info": {
+    "_postman_id": "4e8d0b5b-2f26-4d39-9b2b- atlasrh-api",
+    "name": "AtlasRH API - Documentation et tests",
+    "description": "Collection Postman pour tester AtlasRH. Ordre conseille : creer un departement, creer le manager, creer l'employe, puis tester les demandes de conge. Les identifiants sont stockes automatiquement dans les variables de collection.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8085" },
+    { "key": "departmentId", "value": "1" },
+    { "key": "managerId", "value": "1" },
+    { "key": "employeeId", "value": "2" },
+    { "key": "leaveTypeId", "value": "1" },
+    { "key": "leaveRequestId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "01 - Départements",
+      "item": [
+        {
+          "name": "Créer un département",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Informatique\",\n  \"description\": \"Département informatique\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/departments", "host": ["{{baseUrl}}"], "path": ["api", "departments"] },
+            "description": "Crée un département. Réponse attendue : 201 Created."
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["if (pm.response.code === 201) {", "  pm.collectionVariables.set('departmentId', pm.response.json().id);", "}"] } }]
+        },
+        {
+          "name": "Lister les départements",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/departments", "host": ["{{baseUrl}}"], "path": ["api", "departments"] },
+            "description": "Retourne tous les départements."
+          }
+        },
+        {
+          "name": "Obtenir un département",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/departments/{{departmentId}}", "host": ["{{baseUrl}}"], "path": ["api", "departments", "{{departmentId}}"] }
+          }
+        },
+        {
+          "name": "Modifier un département",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"Ressources Humaines\",\n  \"description\": \"Département RH\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/departments/{{departmentId}}", "host": ["{{baseUrl}}"], "path": ["api", "departments", "{{departmentId}}"] }
+          }
+        },
+        {
+          "name": "Supprimer un département",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/departments/{{departmentId}}", "host": ["{{baseUrl}}"], "path": ["api", "departments", "{{departmentId}}"] },
+            "description": "A utiliser seulement si le département n'est pas utilisé par un employé. Réponse attendue : 204 No Content."
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 - Employés",
+      "item": [
+        {
+          "name": "Créer le manager",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"matricule\": \"M001\",\n  \"firstName\": \"Ahmed\",\n  \"lastName\": \"Manager\",\n  \"email\": \"ahmed.manager@example.com\",\n  \"position\": \"Manager\",\n  \"hireDate\": \"2020-01-15\",\n  \"departmentId\": {{departmentId}}\n}" },
+            "url": { "raw": "{{baseUrl}}/api/employes", "host": ["{{baseUrl}}"], "path": ["api", "employes"] },
+            "description": "Créer d'abord un manager sans managerId. Réponse attendue : 201 Created."
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["if (pm.response.code === 201) {", "  pm.collectionVariables.set('managerId', pm.response.json().id);", "}"] } }]
+        },
+        {
+          "name": "Créer un employé",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"matricule\": \"E001\",\n  \"firstName\": \"Mohamed\",\n  \"lastName\": \"Employe\",\n  \"email\": \"mohamed.employe@example.com\",\n  \"position\": \"Développeur\",\n  \"hireDate\": \"2023-02-01\",\n  \"departmentId\": {{departmentId}},\n  \"managerId\": {{managerId}}\n}" },
+            "url": { "raw": "{{baseUrl}}/api/employes", "host": ["{{baseUrl}}"], "path": ["api", "employes"] }
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["if (pm.response.code === 201) {", "  pm.collectionVariables.set('employeeId', pm.response.json().id);", "}"] } }]
+        },
+        {
+          "name": "Lister les employés - pagination",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/employes?page=0&size=10&sort=lastName,asc", "host": ["{{baseUrl}}"], "path": ["api", "employes"], "query": [{ "key": "page", "value": "0" }, { "key": "size", "value": "10" }, { "key": "sort", "value": "lastName,asc" }] },
+            "description": "page commence à 0. size définit le nombre de résultats. sort accepte par exemple firstName,asc."
+          }
+        },
+        {
+          "name": "Rechercher les employés",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/employes?search=Mohamed&page=0&size=10", "host": ["{{baseUrl}}"], "path": ["api", "employes"], "query": [{ "key": "search", "value": "Mohamed" }, { "key": "page", "value": "0" }, { "key": "size", "value": "10" }] }
+          }
+        },
+        {
+          "name": "Obtenir un employé",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/employes/{{employeeId}}", "host": ["{{baseUrl}}"], "path": ["api", "employes", "{{employeeId}}"] }
+          }
+        },
+        {
+          "name": "Voir l'équipe du manager",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/employes/{{managerId}}/team", "host": ["{{baseUrl}}"], "path": ["api", "employes", "{{managerId}}", "team"] }
+          }
+        },
+        {
+          "name": "Modifier un employé",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"matricule\": \"E001\",\n  \"firstName\": \"Mohamed\",\n  \"lastName\": \"Employe Modifié\",\n  \"email\": \"mohamed.employe@example.com\",\n  \"position\": \"Développeur senior\",\n  \"hireDate\": \"2023-02-01\",\n  \"departmentId\": {{departmentId}},\n  \"managerId\": {{managerId}}\n}" },
+            "url": { "raw": "{{baseUrl}}/api/employes/{{employeeId}}", "host": ["{{baseUrl}}"], "path": ["api", "employes", "{{employeeId}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 - Congés",
+      "item": [
+        {
+          "name": "Créer une demande de congé",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"employeId\": {{employeeId}},\n  \"leaveTypeId\": {{leaveTypeId}},\n  \"startDate\": \"2026-11-02\",\n  \"endDate\": \"2026-11-06\",\n  \"reason\": \"Congé annuel\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/leave-requests", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests"] },
+            "description": "leaveTypeId=1 correspond au Congé Annuel et leaveTypeId=2 au Congé Exceptionnel après l'exécution de Liquibase."
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["if (pm.response.code === 201) {", "  pm.collectionVariables.set('leaveRequestId', pm.response.json().id);", "}"] } }]
+        },
+        {
+          "name": "Lister les demandes d'un employé",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/employee/{{employeeId}}?status=EN_ATTENTE", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "employee", "{{employeeId}}"], "query": [{ "key": "status", "value": "EN_ATTENTE" }] }
+          }
+        },
+        {
+          "name": "Résumé des congés",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/employee/{{employeeId}}/summary", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "employee", "{{employeeId}}", "summary"] }
+          }
+        },
+        {
+          "name": "Lister les demandes de l'équipe",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/manager/{{managerId}}/team-requests?status=EN_ATTENTE", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "manager", "{{managerId}}", "team-requests"], "query": [{ "key": "status", "value": "EN_ATTENTE" }] }
+          }
+        },
+        {
+          "name": "Approuver une demande",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"managerId\": {{managerId}},\n  \"status\": \"APPROUVEE\",\n  \"comment\": \"Demande approuvée\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}/decision", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "{{leaveRequestId}}", "decision"] }
+          }
+        },
+        {
+          "name": "Refuser une demande",
+          "request": {
+            "method": "PATCH",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"managerId\": {{managerId}},\n  \"status\": \"REFUSEE\",\n  \"comment\": \"Motif du refus\"\n}" },
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}/decision", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "{{leaveRequestId}}", "decision"] },
+            "description": "Un commentaire est obligatoire pour REFUSEE. Utiliser une nouvelle demande pour tester ce scénario après une approbation/refus."
+          }
+        },
+        {
+          "name": "Annuler une demande en attente",
+          "request": {
+            "method": "PATCH",
+            "url": { "raw": "{{baseUrl}}/api/leave-requests/{{leaveRequestId}}/cancel?employeeId={{employeeId}}", "host": ["{{baseUrl}}"], "path": ["api", "leave-requests", "{{leaveRequestId}}", "cancel"], "query": [{ "key": "employeeId", "value": "{{employeeId}}" }] },
+            "description": "Possible uniquement lorsque la demande est EN_ATTENTE."
+          }
+        }
+      ]
+    }
+  ]
+}
