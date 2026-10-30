@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89a373c-e0db-462a-a691-f49046204dd8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/AtlasrhApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/AtlasrhApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/controller/EmployeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/controller/EmployeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Employe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/LeaveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/LeaveRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/repository/EmployeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/repository/EmployeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,11 +24,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="13" />
+    <option name="cachedIndexableFilesCount" value="48" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -25,18 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Mouadelhiloufi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mouadelhiloufi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mouadelhiloufi/AtlasRh.git",
-    "accountId": "434ab5d3-8c7e-4a6b-a984-4e1e0fe9d8ad"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mouadelhiloufi/AtlasRh.git&quot;,
+    &quot;accountId&quot;: &quot;434ab5d3-8c7e-4a6b-a984-4e1e0fe9d8ad&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -48,10 +61,69 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.6954265526633145" />
+      <entry key="MS500" value="3.9566496665600353" />
+      <entry key="S2" value="6.336420152078769" />
+      <entry key="S5" value="7.247025544895808" />
+      <entry key="S10" value="7.6068868078609295" />
+      <entry key="S30" value="7.865054990816442" />
+      <entry key="S60" value="7.932026891078826" />
+      <entry key="M2" value="7.97882239609974" />
+      <entry key="M5" value="11.2667563986959" />
+      <entry key="M10" value="32.070828523115026" />
+      <entry key="M15" value="56.521002562233974" />
+      <entry key="M30" value="109.65492834763498" />
+      <entry key="H1" value="164.248277829952" />
+      <entry key="H2" value="217.4356256456488" />
+      <entry key="H4" value="263.4652754051341" />
+      <entry key="D1" value="323.3598238301722" />
+      <entry key="W1" value="336.67216223687745" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="5.568116233202333E-181" />
+      <entry key="S60" value="1.8983365016902801E-90" />
+      <entry key="M2" value="3.604914498896212E-45" />
+      <entry key="M5" value="5.352915785649381E-18" />
+      <entry key="M10" value="6.118361479456693E-9" />
+      <entry key="M15" value="6.398467739972012E-6" />
+      <entry key="M30" value="0.006692117291779765" />
+      <entry key="H1" value="0.21643371350757082" />
+      <entry key="H2" value="1.2308638123036684" />
+      <entry key="H4" value="2.9353078332565046" />
+      <entry key="D1" value="6.05606588259289" />
+      <entry key="W1" value="6.856638617206227" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.5682663539850574" />
+      <entry key="MS500" value="3.754571647234649" />
+      <entry key="S2" value="6.236496624133874" />
+      <entry key="S5" value="7.200542515934023" />
+      <entry key="S10" value="7.582414688074544" />
+      <entry key="S30" value="7.856609034634862" />
+      <entry key="S60" value="7.927766849070107" />
+      <entry key="M2" value="7.976682440847774" />
+      <entry key="M5" value="11.26583607757682" />
+      <entry key="M10" value="32.07016250689071" />
+      <entry key="M15" value="56.52039977600049" />
+      <entry key="M30" value="109.661119353296" />
+      <entry key="H1" value="164.46414968673898" />
+      <entry key="H2" value="218.66562782821646" />
+      <entry key="H4" value="266.3996722740715" />
+      <entry key="D1" value="329.41558917532365" />
+      <entry key="W1" value="343.52875239654634" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3KxMb6sm6AR67yhRkVNz3JrkmN8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -68,12 +140,16 @@
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.AtlasrhApiApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/mouad/OneDrive/Desktop/YOUCODE_S2/atlasrh-api",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,6 +177,14 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c89a373c-e0db-462a-a691-f49046204dd8" name="Changes" comment="" />
@@ -109,6 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1792494836268</updated>
       <workItem from="1792494837580" duration="22010000" />
+      <workItem from="1792930840444" duration="211000" />
     </task>
     <servers />
   </component>
