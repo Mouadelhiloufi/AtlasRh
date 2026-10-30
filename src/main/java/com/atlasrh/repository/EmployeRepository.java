@@ -22,8 +22,9 @@ public interface EmployeRepository extends JpaRepository<Employe, Long> {
     // Recherche paginée par nom/prénom ou par nom de département
     @Query("SELECT e FROM Employe e " +
             "LEFT JOIN e.department d " +
-            "WHERE (:searchTerm IS NULL OR LOWER(e.firstName) LIKE LOWER(CONCAT('%', :searchTerm, '%')) " +
-            "   OR LOWER(e.lastName) LIKE LOWER(CONCAT('%', :searchTerm, '%'))) " +
+            "WHERE (COALESCE(:searchTerm, '') = '' " +
+            "   OR LOWER(e.firstName) LIKE CONCAT('%', LOWER(COALESCE(:searchTerm, '')), '%') " +
+            "   OR LOWER(e.lastName) LIKE CONCAT('%', LOWER(COALESCE(:searchTerm, '')), '%')) " +
             "AND (:departmentId IS NULL OR d.id = :departmentId)")
     Page<Employe> searchEmployes(@Param("searchTerm") String searchTerm,
                                    @Param("departmentId") Long departmentId,
