@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89a373c-e0db-462a-a691-f49046204dd8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/AtlasrhApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/AtlasrhApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/controller/EmployeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/controller/EmployeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Employe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/Employe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/LeaveRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/entity/LeaveRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atlasrh/repository/EmployeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atlasrh/repository/EmployeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="48" />
+    <option name="cachedIndexableFilesCount" value="66" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,23 +54,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.6954265526633145" />
-      <entry key="MS500" value="3.9566496665600353" />
-      <entry key="S2" value="6.336420152078769" />
-      <entry key="S5" value="7.247025544895808" />
-      <entry key="S10" value="7.6068868078609295" />
-      <entry key="S30" value="7.865054990816442" />
-      <entry key="S60" value="7.932026891078826" />
-      <entry key="M2" value="7.97882239609974" />
-      <entry key="M5" value="11.2667563986959" />
-      <entry key="M10" value="32.070828523115026" />
-      <entry key="M15" value="56.521002562233974" />
-      <entry key="M30" value="109.65492834763498" />
-      <entry key="H1" value="164.248277829952" />
-      <entry key="H2" value="217.4356256456488" />
-      <entry key="H4" value="263.4652754051341" />
-      <entry key="D1" value="323.3598238301722" />
-      <entry key="W1" value="336.67216223687745" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0000000000000109" />
+      <entry key="M2" value="1.000000683092738" />
+      <entry key="M5" value="1.0326263382430056" />
+      <entry key="M10" value="2.1843176264273927" />
+      <entry key="M15" value="4.92154468179327" />
+      <entry key="M30" value="13.985457826949835" />
+      <entry key="H1" value="24.629889341808656" />
+      <entry key="H2" value="32.954111684503246" />
+      <entry key="H4" value="44.752411865046994" />
+      <entry key="D1" value="330.48497643433046" />
+      <entry key="W1" value="593.9369585854172" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -87,37 +78,37 @@
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
-      <entry key="S30" value="5.568116233202333E-181" />
-      <entry key="S60" value="1.8983365016902801E-90" />
-      <entry key="M2" value="3.604914498896212E-45" />
-      <entry key="M5" value="5.352915785649381E-18" />
-      <entry key="M10" value="6.118361479456693E-9" />
-      <entry key="M15" value="6.398467739972012E-6" />
-      <entry key="M30" value="0.006692117291779765" />
-      <entry key="H1" value="0.21643371350757082" />
-      <entry key="H2" value="1.2308638123036684" />
-      <entry key="H4" value="2.9353078332565046" />
-      <entry key="D1" value="6.05606588259289" />
-      <entry key="W1" value="6.856638617206227" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="2.9984771133735256E-276" />
+      <entry key="M5" value="1.979669621662203E-110" />
+      <entry key="M10" value="3.720799652474475E-55" />
+      <entry key="M15" value="9.89486987492436E-37" />
+      <entry key="M30" value="2.6316649449045455E-18" />
+      <entry key="H1" value="4.291987383494123E-9" />
+      <entry key="H2" value="1.733312090277535E-4" />
+      <entry key="H4" value="0.03483269162412861" />
+      <entry key="D1" value="2.8923187612834225" />
+      <entry key="W1" value="6.169671701870656" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5682663539850574" />
-      <entry key="MS500" value="3.754571647234649" />
-      <entry key="S2" value="6.236496624133874" />
-      <entry key="S5" value="7.200542515934023" />
-      <entry key="S10" value="7.582414688074544" />
-      <entry key="S30" value="7.856609034634862" />
-      <entry key="S60" value="7.927766849070107" />
-      <entry key="M2" value="7.976682440847774" />
-      <entry key="M5" value="11.26583607757682" />
-      <entry key="M10" value="32.07016250689071" />
-      <entry key="M15" value="56.52039977600049" />
-      <entry key="M30" value="109.661119353296" />
-      <entry key="H1" value="164.46414968673898" />
-      <entry key="H2" value="218.66562782821646" />
-      <entry key="H4" value="266.3996722740715" />
-      <entry key="D1" value="329.41558917532365" />
-      <entry key="W1" value="343.52875239654634" />
+      <entry key="MS100" value="9.724125879816147E-6" />
+      <entry key="MS500" value="0.09944206046936481" />
+      <entry key="S2" value="0.561555297551196" />
+      <entry key="S5" value="0.7938839309316525" />
+      <entry key="S10" value="0.8910016447412723" />
+      <entry key="S30" value="0.9622608910931193" />
+      <entry key="S60" value="0.9809489747653242" />
+      <entry key="M2" value="0.9904293653487839" />
+      <entry key="M5" value="1.028785498101251" />
+      <entry key="M10" value="2.1823729932466303" />
+      <entry key="M15" value="4.920212361645469" />
+      <entry key="M30" value="13.984732646541506" />
+      <entry key="H1" value="24.62949214542075" />
+      <entry key="H2" value="32.954072833006556" />
+      <entry key="H4" value="44.78712133619791" />
+      <entry key="D1" value="333.3771185990233" />
+      <entry key="W1" value="600.1065802109879" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -136,7 +127,12 @@
   "keyToString": {
     "Maven.atlasrh-api [clean].executor": "Run",
     "Maven.atlasrh-api [compile].executor": "Run",
+    "Maven.atlasrh-api [verify].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -145,7 +141,7 @@
     "Spring Boot.AtlasrhApiApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/partie-1-unit-tests",
     "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
@@ -158,7 +154,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "ml.llm.LLMThirdPartyAiProvidersConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -203,5 +199,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../../OneDrive/Desktop/YOUCODE_S2/atlasrh-api/target/jacoco.exec" NAME="jacoco.exec" MODIFIED="1794310948296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
